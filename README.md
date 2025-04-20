@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
 
-## Project info
 
-**URL**: https://lovable.dev/projects/f1c5cfe8-c6e2-4991-8771-702591fc98d0
+## Deskripsi Proyek
 
-## How can I edit this code?
+Aplikasi web sederhana untuk manajemen presensi kelas. Aplikasi ini memungkinkan guru atau administrator untuk:
 
-There are several ways of editing your application.
+- Melihat daftar siswa
+- Menambahkan siswa baru
+- Mengedit data siswa
+- Menghapus siswa dari daftar
 
-**Use Lovable**
+## Fitur Utama
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f1c5cfe8-c6e2-4991-8771-702591fc98d0) and start prompting.
+- 📋 Tampilan daftar siswa dengan informasi:
+  - Nama siswa
+  - Foto profil
+  - Status presensi (Masuk, Izin, Alpha)
 
-Changes made via Lovable will be committed automatically to this repo.
+- ➕ Tambah siswa baru dengan mudah
+- ✏️ Edit informasi siswa
+- 🗑️ Hapus siswa dari daftar
 
-**Use your preferred IDE**
+## Teknologi yang Digunakan
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Local Storage (untuk penyimpanan data)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Prasyarat
 
-Follow these steps:
+- Node.js (versi 18 atau lebih baru)
+- npm atau yarn
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Instalasi
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. Clone repositori:
+```bash
+git clone <URL_REPOSITORI>
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. Masuk ke direktori proyek:
+```bash
+cd absent-form
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Install dependencies:
+```bash
+npm install
+```
+
+4. Jalankan aplikasi dalam mode pengembangan:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+5. Buka browser di `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Penggunaan
 
-**Use GitHub Codespaces**
+- Klik tombol "Add Student" untuk menambahkan siswa baru
+- Gunakan ikon edit pada setiap baris untuk mengubah data siswa
+- Gunakan ikon hapus untuk mengeluarkan siswa dari daftar
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Kontribusi
 
-## What technologies are used for this project?
+Kontribusi selalu dipersilakan! Silakan buat *pull request* atau laporkan *issues*.
 
-This project is built with:
+## Lisensi
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f1c5cfe8-c6e2-4991-8771-702591fc98d0) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Proyek ini dilisensikan di bawah MIT License.
