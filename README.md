@@ -1,72 +1,105 @@
+# Attendance Form Demo
 
+A simple attendance form demo application built using React, TypeScript, and AWS Lambda.
 
-## Deskripsi Proyek
+## Technologies Used
 
-Aplikasi web sederhana untuk manajemen presensi kelas. Aplikasi ini memungkinkan guru atau administrator untuk:
-
-- Melihat daftar siswa
-- Menambahkan siswa baru
-- Mengedit data siswa
-- Menghapus siswa dari daftar
-
-## Fitur Utama
-
-- 📋 Tampilan daftar siswa dengan informasi:
-  - Nama siswa
-  - Foto profil
-  - Status presensi (Masuk, Izin, Alpha)
-
-- ➕ Tambah siswa baru dengan mudah
-- ✏️ Edit informasi siswa
-- 🗑️ Hapus siswa dari daftar
-
-## Teknologi yang Digunakan
-
-- React
+### Frontend
+- React 18.3.1
 - TypeScript
+- Vite
 - Tailwind CSS
-- shadcn/ui
-- Local Storage (untuk penyimpanan data)
+- shadcn/ui (UI components)
+- React Router DOM
+- React Query
+- React Hook Form
+- Zod (validation)
 
-## Prasyarat
+### Folder Structure
 
-- Node.js (versi 18 atau lebih baru)
-- npm atau yarn
-
-## Instalasi
-
-1. Clone repositori:
-```bash
-git clone <URL_REPOSITORI>
+```
+src/
+├── components/
+│   └── ui/          # UI components from shadcn
+├── hooks/           # Custom React hooks
+├── lib/            # Utilities and helper functions
+├── pages/          # Application pages
+└── main.tsx        # Application entry point
 ```
 
-2. Masuk ke direktori proyek:
+## Features
+
+- Attendance form with validation
+- Responsive and modern UI using Tailwind CSS
+- Routing with React Router
+- State management with React Query
+- Reusable UI components with shadcn/ui
+
+## Local Development
+
+To run the application locally:
+
+1. Clone the repository:
 ```bash
-cd absent-form
+git clone https://github.com/jeremiahjirey/absent-form-demo.git
+cd absent-form-demo
 ```
 
-3. Install dependencies:
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-4. Jalankan aplikasi dalam mode pengembangan:
+3. Start the development server:
 ```bash
 npm run dev
 ```
 
-5. Buka browser di `http://localhost:5173`
+The application will run at `http://localhost:8080`
 
-## Penggunaan
+## Component Usage Guide
 
-- Klik tombol "Add Student" untuk menambahkan siswa baru
-- Gunakan ikon edit pada setiap baris untuk mengubah data siswa
-- Gunakan ikon hapus untuk mengeluarkan siswa dari daftar
+### UI Components
 
-## Kontribusi
+The application uses shadcn/ui which provides various customizable components:
 
-Kontribusi selalu dipersilakan! Silakan buat *pull request* atau laporkan *issues*.
+- Button
+- Form
+- Input
+- Dialog
+- Alert
+- Toast
+- and more.
 
-## Lisensi
+### Form Handling
 
-Proyek ini dilisensikan di bawah MIT License.
+Forms use a combination of React Hook Form and Zod for validation:
+
+```tsx
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+```
+
+## Deployment
+
+This application can be deployed using various hosting platforms. The default configuration uses Vite as the build tool.
+
+To build the application:
+
+```bash
+npm run build
+```
+
+## License
+
+[MIT License](LICENSE)
+
+## Contributions
+
+Contributions are always welcome! Please create a pull request for improvements or feature additions.
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Create a Pull Request
