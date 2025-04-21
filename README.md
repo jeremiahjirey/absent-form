@@ -57,49 +57,16 @@ npm run dev
 
 The application will run at `http://localhost:8080`
 
-## Component Usage Guide
+## Penggunaan
 
-### UI Components
+- Klik tombol "Add Student" untuk menambahkan siswa baru
+- Gunakan ikon edit pada setiap baris untuk mengubah data siswa
+- Gunakan ikon hapus untuk mengeluarkan siswa dari daftar
 
-The application uses shadcn/ui which provides various customizable components:
+## Kontribusi
 
-- Button
-- Form
-- Input
-- Dialog
-- Alert
-- Toast
-- and more.
+Kontribusi selalu dipersilakan! Silakan buat *pull request* atau laporkan *issues*.
 
-### Form Handling
+## Lisensi
 
-Forms use a combination of React Hook Form and Zod for validation:
-
-```tsx
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-```
-
-## Deployment
-
-This application can be deployed using various hosting platforms. The default configuration uses Vite as the build tool.
-
-To build the application:
-
-```bash
-npm run build
-```
-
-## License
-
-[MIT License](LICENSE)
-
-## Contributions
-
-Contributions are always welcome! Please create a pull request for improvements or feature additions.
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Create a Pull Request
+Proyek ini dilisensikan di bawah MIT License.
