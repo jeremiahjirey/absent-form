@@ -1,9 +1,10 @@
 
-const { getConnection, response } = require('../utils/helpers');
+const { getConnection, response, ensureStudentTable } = require('../utils/helpers');
 
 // GET all students
 async function getStudents() {
   try {
+    await ensureStudentTable();
     const conn = await getConnection();
     const [rows] = await conn.execute('SELECT * FROM students');
     return response(200, { success: true, data: rows });
@@ -16,6 +17,7 @@ async function getStudents() {
 // GET student by ID
 async function getStudentById(id) {
   try {
+    await ensureStudentTable();
     const conn = await getConnection();
     const [rows] = await conn.execute('SELECT * FROM students WHERE id = ?', [id]);
     

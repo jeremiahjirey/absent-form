@@ -38,7 +38,23 @@ const response = (statusCode, body) => {
   };
 };
 
+// Helper untuk cek & membuat tabel students jika belum ada
+async function ensureStudentTable() {
+  const conn = await getConnection();
+  // Buat tabel kalau belum ada
+  const sql = `
+    CREATE TABLE IF NOT EXISTS students (
+      id VARCHAR(36) PRIMARY KEY,
+      name VARCHAR(100) NOT NULL,
+      photoUrl VARCHAR(255) NOT NULL,
+      status ENUM('PRESENT', 'EXCUSED', 'ABSENT') NOT NULL DEFAULT 'PRESENT'
+    );
+  `;
+  await conn.execute(sql);
+}
+
 module.exports = {
   getConnection,
-  response
+  response,
+  ensureStudentTable,
 };

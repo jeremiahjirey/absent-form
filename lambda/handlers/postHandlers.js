@@ -1,24 +1,25 @@
 
 const { v4: uuidv4 } = require('uuid');
-const { getConnection, response } = require('../utils/helpers');
+const { getConnection, response, ensureStudentTable } = require('../utils/helpers');
 
 // CREATE student
 async function createStudent(data) {
   try {
     const { name, photoUrl, status } = JSON.parse(data);
-    
+
     if (!name || !photoUrl || !status) {
       return response(400, { success: false, error: "Missing required fields" });
     }
-    
+
+    await ensureStudentTable();
     const id = uuidv4();
     const conn = await getConnection();
-    
+
     await conn.execute(
       'INSERT INTO students (id, name, photoUrl, status) VALUES (?, ?, ?, ?)',
       [id, name, photoUrl, status]
     );
-    
+
     return response(201, { 
       success: true, 
       data: { id, name, photoUrl, status } 
