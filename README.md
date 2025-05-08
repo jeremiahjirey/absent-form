@@ -1,6 +1,6 @@
 # Attendance Form Demo
 
-A simple attendance form demo application built using React, TypeScript, and AWS Lambda.
+A simple Attendance form demo application built using React, TypeScript, and AWS Lambda.
 
 ## Technologies Used
 
